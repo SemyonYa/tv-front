@@ -1,0 +1,28 @@
+<div class="wrap">
+  <a class="logo" [routerLink]="['/']">
+    <img src="/assets/rastr/logo.png" alt="logo">
+  </a>
+  <div class="btns">
+    <div [routerLink]="['/titles']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="btns-item">
+      <img src="/assets/svg/basket.svg" alt="">
+      <div class="badge">3</div>
+      <p>Корзина</p>
+    </div>
+    <div [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="btns-item">
+      <img src="/assets/svg/clipboard.svg" alt="">
+      <p>Заметки</p>
+    </div>
+    <div [routerLink]="['/tasks']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="btns-item">
+      <img src="/assets/svg/flag.svg" alt="">
+      <div class="badge">36</div>
+      <p>Задачи</p>
+    </div>
+    <div class="btns-item">
+      <img src="/assets/svg/send.svg" alt="">
+      <p>Сообщения</p>
+    </div>
+    <div [routerLink]="['/enter']" class="btns-avatar">
+      <img src="/assets/svg/person-circle-sharp.svg" alt="">
+    </div>
+  </div>
+</div>

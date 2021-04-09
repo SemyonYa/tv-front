@@ -1,0 +1,16 @@
+<div class="wrap" @pageAnimation>
+  <h2>Все тайтлы</h2>
+  <input type="text" placeholder="Поиск...">
+  <div class="list">
+    <ng-container *ngIf="titles; else inProgress">
+      <tv-titles-item *ngFor="let title of titles" [title]="title" @pageAnimation></tv-titles-item>
+    </ng-container>
+    <ng-container *ngIf="titles?.length == 0">
+      <p>Список пуст</p>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #inProgress>
+  <tv-in-progress></tv-in-progress>
+</ng-template>

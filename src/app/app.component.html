@@ -1,0 +1,16 @@
+<div class="wrap">
+  <tv-header *ngIf="!isEnter" @pageAnimation></tv-header>
+  <div class="body">
+    <div *ngIf="!isEnter" class="left" @pageAnimation>
+      <button>Создать</button>
+      <tv-menu ></tv-menu>
+    </div>
+    <div [ngClass]="{'content': true, 'center': isEnter}">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="enter-wrap">
+  <router-outlet></router-outlet>
+</div> -->

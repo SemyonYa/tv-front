@@ -1,0 +1,23 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 40px;
+
+  img {
+    width: 48px;
+    animation: rotation 1s infinite linear;
+  }
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}

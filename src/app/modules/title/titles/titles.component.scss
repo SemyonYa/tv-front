@@ -1,0 +1,13 @@
+.wrap {
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    tv-titles-item {
+      display: block;
+      width: 100%;
+    }
+  }
+}

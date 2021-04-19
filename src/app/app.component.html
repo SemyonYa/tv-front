@@ -2,7 +2,7 @@
   <tv-header *ngIf="!isEnter" @pageAnimation></tv-header>
   <div class="body">
     <div *ngIf="!isEnter" class="left" @pageAnimation>
-      <button>Создать</button>
+      <button [routerLink]="['/titles/create']">Создать</button>
       <tv-menu ></tv-menu>
     </div>
     <div [ngClass]="{'content': true, 'center': isEnter}">

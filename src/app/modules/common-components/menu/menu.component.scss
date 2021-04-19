@@ -1,23 +1,25 @@
 .wrap {
+
   .item {
+
     .parent {
       display: flex;
       align-items: center;
       margin-top: 10px;
       cursor: pointer;
+      outline: none;
 
       tv-icon {
-        width: 10px;
+        width: 18px;
         transition: .5s;
 
         &.invisible {
           opacity: 0;
         }
-      }
 
-      .icon {
-        width: 18px;
-        margin-left: 10px;
+        &.arrow {
+          width: 10px;
+        }
       }
 
       span {
@@ -28,16 +30,10 @@
       }
 
       &.active {
-        // color: var(--color-primary);
-
-        .arrow {
-          transform: rotate(90deg);
-        }
-
-        .icon {
-          // svg {
-          fill: currentColor;
-          // }
+        tv-icon {
+          &.arrow {
+            transform: rotate(90deg);
+          }
         }
 
         span {
@@ -50,11 +46,17 @@
       overflow: hidden;
 
       &-item {
+        outline: none;
         color: var(--color-grey-menu);
         margin-left: 68px;
         font-size: 13px;
         font-weight: 600;
         cursor: pointer;
+        transition: .4s;
+
+        &.active {
+          color: var(--color-primary);
+        }
       }
     }
   }

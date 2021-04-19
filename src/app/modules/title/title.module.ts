@@ -5,6 +5,9 @@ import { TitleRoutingModule } from './title-routing.module';
 import { TitlesItemComponent } from './titles-item/titles-item.component';
 import { CommonComponentsModule } from '../common-components/common-components.module';
 import localeRu from '@angular/common/locales/ru';
+import { CreateTitleComponent } from './create-title/create-title.component';
+import { FavoriteTitlesComponent } from './favorite-titles/favorite-titles.component';
+import { ProdComComponent } from './prod-com/prod-com.component';
 
 registerLocaleData(localeRu);
 
@@ -12,6 +15,9 @@ registerLocaleData(localeRu);
   declarations: [
     TitlesComponent,
     TitlesItemComponent,
+    CreateTitleComponent,
+    FavoriteTitlesComponent,
+    ProdComComponent,
   ],
   imports: [
     CommonModule,

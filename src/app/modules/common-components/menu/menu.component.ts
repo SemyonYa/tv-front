@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
     new MenuItem(
       10,
       'Фильмы',
-      '/',
+      '/films',
       'film',
       [],
     ),
@@ -27,18 +27,18 @@ export class MenuComponent implements OnInit {
       [
         new MenuItem(
           21,
-          'Тайтл',
-          '/',
+          'Создать',
+          '/titles/create',
         ),
         new MenuItem(
           22,
           'Избранное',
-          '/',
+          '/titles/favorite',
         ),
         new MenuItem(
           23,
           'ПродКом',
-          '/',
+          '/titles/prodcom',
         ),
       ],
     ),
@@ -52,7 +52,7 @@ export class MenuComponent implements OnInit {
     new MenuItem(
       40,
       'Аналитика',
-      '/analitics',
+      '/analytics',
       'analytics',
       [],
     ),

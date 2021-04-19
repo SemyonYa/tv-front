@@ -8,16 +8,16 @@
       <div class="badge">3</div>
       <p>Корзина</p>
     </div>
-    <div [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="btns-item">
+    <!-- <div [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="btns-item">
       <img src="/assets/svg/clipboard.svg" alt="">
       <p>Заметки</p>
-    </div>
+    </div> -->
     <div [routerLink]="['/tasks']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="btns-item">
       <img src="/assets/svg/flag.svg" alt="">
       <div class="badge">36</div>
       <p>Задачи</p>
     </div>
-    <div class="btns-item">
+    <div [routerLink]="['/messages']" class="btns-item">
       <img src="/assets/svg/send.svg" alt="">
       <p>Сообщения</p>
     </div>

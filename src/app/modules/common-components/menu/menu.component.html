@@ -2,8 +2,12 @@
   <div *ngFor="let item of menu" class="item">
     <div [ngClass]="{'parent': true}" [routerLink]="[item.route]" routerLinkActive="active"
       [routerLinkActiveOptions]="{exact:true}" (click)="toggleItem(item)">
-      <img src="/assets/svg/caret-forward.svg" [ngClass]="{'arrow': true, 'invisible': item.children.length == 0}">
-      <img src="/assets/svg/{{item.icon}}" class="icon">
+      <tv-icon name="caret-forward" size="10" color="#ababab" hoverColor="var(--color-primary)"
+        activeColor="var(--color-primary)" [ngClass]="{'invisible': item.children.length == 0}"> </tv-icon>
+      <!-- <img src="/assets/svg/caret-forward.svg" [ngClass]="{'arrow': true, 'invisible': item.children.length == 0}"> -->
+      <tv-icon [name]="item.icon" size="18" color="#ababab" hoverColor="var(--color-primary)"
+        activeColor="var(--color-primary)" [active]="item.id == activeItemId"></tv-icon>
+      <!-- <img src="/assets/svg/{{item.icon}}" class="icon"> -->
       <span>{{item.title}}</span>
     </div>
     <div *ngIf="item.id == activeItemId" class="children" @collapseAnimation>

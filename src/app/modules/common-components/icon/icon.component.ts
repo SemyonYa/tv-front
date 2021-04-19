@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tv-icon',
@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent implements OnInit {
+  @Input() name: string;
+  @Input() size: number = 24;
+  @Input() transition: number = 0.5;
+  @Input() color: string = 'black';
+  @Input() hoverColor: string;
+  @Input() activeColor: string;
+  @Input() active: boolean;
+  hover = false;
 
   constructor() { }
 

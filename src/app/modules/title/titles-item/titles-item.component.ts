@@ -7,7 +7,7 @@ import { Fake } from 'src/app/models/fake.model';
   styleUrls: ['./titles-item.component.scss']
 })
 export class TitlesItemComponent implements OnInit {
-  @Input() item: Fake;
+  @Input() title: Fake;
 
   constructor() { }
 

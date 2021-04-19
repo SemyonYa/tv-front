@@ -1,6 +1,6 @@
 <div class="wrap" @pageAnimation>
   <h2>Все тайтлы</h2>
-  <input type="text" placeholder="Поиск...">
+  <input type="text" class="with-icon" placeholder="Поиск...">
   <div class="list">
     <ng-container *ngIf="titles; else inProgress">
       <tv-titles-item *ngFor="let title of titles" [title]="title" @pageAnimation></tv-titles-item>
@@ -12,5 +12,7 @@
 </div>
 
 <ng-template #inProgress>
-  <tv-in-progress></tv-in-progress>
+  <div class="in-progress-wrap">
+    <tv-in-progress></tv-in-progress>
+  </div>
 </ng-template>

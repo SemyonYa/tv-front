@@ -27,4 +27,8 @@ export class FakeService {
       this.list$.next(list);
     }, 1000);
   }
+
+  loadingList(): void {
+    this.list$.next(undefined);
+  }
 }

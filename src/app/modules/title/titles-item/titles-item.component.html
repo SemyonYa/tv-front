@@ -1,18 +1,57 @@
 <div class="wrap">
-    <!-- 1 -->
-    <div class="col indicator1">
-        <img src="/assets/svg/ellipse.svg" alt="">
+  <!-- 1 -->
+  <div class="col indicator">
+    <tv-icon name="ellipse" size="8" color="var(--color-primary)" hoverColor="var(--color-primary)"></tv-icon>
+  </div>
+  <!-- 2 -->
+  <div class="col indicator">
+    <tv-icon name="mark" size="10" color="var(--color-red)" hoverColor="var(--color-red)"></tv-icon>
+  </div>
+  <!-- 3 -->
+  <div class="col title">
+    {{title.name}}
+  </div>
+  <!-- 4 -->
+  <div class="col text">
+    {{title.description.substring(0, 12)}}...
+  </div>
+  <!-- 5 -->
+  <div class="col text">
+    {{title.name}}
+  </div>
+  <!-- 6 -->
+  <div class="col text">
+    {{title.description.substring(0, 12)}}...
+  </div>
+  <!-- 7 -->
+  <div class="col text">
+    {{title.date | date:'dd MMM y'}}
+  </div>
+  <!-- 8 -->
+  <div class="col text">
+    {{title.qty * 236000 | currency:'&#8381;'}}
+  </div>
+  <!-- 9 -->
+  <div class="col text">
+    {{title.qty}}%
+  </div>
+  <!-- 10 -->
+  <div class="col flags">
+    <div class="flags-item">
+      {{title.qty % 7 + 1}}
+      <tv-icon name="flag" size="10" color="var(--color-red)"></tv-icon>
     </div>
-    <div class="col indicator2">
-        <img src="/assets/svg/mark.svg" alt="">
+    <div class="flags-item">
+      {{title.qty % 3 + 1}}
+      <tv-icon name="flag" size="10" color="var(--color-yellow)"></tv-icon>
     </div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
+    <div class="flags-item">
+      {{title.qty % 4 + 1}}
+      <tv-icon name="flag" size="10" color="var(--color-primary)"></tv-icon>
+    </div>
+  </div>
+  <!-- 11 -->
+  <div class="col text">
+    Person #{{title.id}}
+  </div>
 </div>

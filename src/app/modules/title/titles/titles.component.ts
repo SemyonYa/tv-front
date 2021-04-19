@@ -15,6 +15,7 @@ export class TitlesComponent implements OnInit {
   constructor(private fakeService: FakeService) { }
 
   ngOnInit(): void {
+    this.fakeService.loadingList();
     this.fakeService.fetchList();
     this.fakeService.list$
       .subscribe(

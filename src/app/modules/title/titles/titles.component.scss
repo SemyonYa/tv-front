@@ -1,13 +1,25 @@
 .wrap {
+  .with-icon {
+    background-image: url('/assets/svg/search.svg');
+  }
+
   .list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 40px;
 
     tv-titles-item {
       display: block;
       width: 100%;
+      border-bottom: solid 1px var(--color-grey-border);
     }
   }
+}
+
+.in-progress-wrap {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
